@@ -13,9 +13,13 @@ html {
 body {
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   background-color: rgb(250, 254, 254);
+  margin: 0 auto;
+}
+.darkmode {
+  background-color: black;
 }
 .container {
   display: flex;
@@ -35,7 +39,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
   height: 100%;
   padding-top: 5rem;
 }
@@ -54,11 +59,18 @@ header {
 }
 header h3 {
   font-weight: 600;
+  padding-top: 10px;
   font-size: 24px;
 }
 
 nav .fa-bars {
   display: none;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
 }
 .unordered {
   display: flex;
@@ -66,6 +78,10 @@ nav .fa-bars {
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
+}
+.fa-moon {
+  font-size: 24px;
+  padding-top: 8px;
 }
 
 li {
@@ -76,13 +92,15 @@ li a {
   text-decoration: none;
   font-size: 24px;
   font-weight: 550;
-
   color: rgb(86, 81, 81);
+}
+.link {
+  color: white;
 }
 main {
   display: flex;
   padding: 3rem auto;
-  width: 100vw;
+  width: 100%;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
@@ -102,9 +120,9 @@ main {
   padding-top: 80px;
 }
 .home-image img {
-  height: 360px;
+  height: 350px;
   margin: 0 auto;
-  width: 380px;
+  width: 350px;
 }
 
 .home-details h1 {
@@ -131,6 +149,7 @@ main {
   align-items: center;
   flex-wrap: wrap;
   gap: 50px;
+  overflow-x: hidden;
   height: 100%;
 }
 
@@ -174,6 +193,7 @@ main {
   height: 100%;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 #service h2 {
   margin-bottom: 10px;
@@ -219,7 +239,14 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
   gap: 30px;
+  width: 100%;
+  padding-bottom: 30px;
+  height: 100%;
+}
+.dish {
+  color: black;
 }
 #menu main {
   display: flex;
@@ -275,11 +302,12 @@ p {
   width: 100%;
   height: 100%;
   gap: 50px;
+  overflow-x: hidden;
 }
 .contact-details {
   display: flex;
   width: 100%;
-  height: 400px;
+  height: 300px;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
@@ -338,12 +366,15 @@ footer {
   width: 100%;
   height: 100%;
 }
-footer #copyright {
+footer .copyright {
   text-align: center;
   font-size: 1rem;
-  color: black;
+
   font-weight: 600;
   margin-top: 7rem;
+}
+.edited {
+  color: white;
 }
 
 @media screen and (max-width: 600px) {
@@ -354,7 +385,10 @@ footer #copyright {
   #menu h2 {
     font-size: 1.6rem;
   }
-
+  .home-image img {
+    height: 200px;
+    width: 0px;
+  }
   .about-image img {
     height: 300px;
     width: 300px;
@@ -394,6 +428,10 @@ footer #copyright {
     font-size: 1.4rem;
 
     z-index: 1000;
+  }
+
+  header h3 {
+    padding-top: 1px;
   }
   li {
     list-style: none;
