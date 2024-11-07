@@ -244,7 +244,7 @@ main {
   align-items: center;
   overflow-x: hidden;
   gap: 30px;
-  width: 100%;
+  width: 100vw;
   padding-bottom: 30px;
   height: 100%;
 }
@@ -382,7 +382,8 @@ footer .copyright {
 
 @media screen and (max-width: 600px) {
   #service h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    text-align: center;
   }
 
   #menu h2 {
