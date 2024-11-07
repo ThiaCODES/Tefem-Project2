@@ -29,7 +29,15 @@ function changeMode() {
   }
 }
 console.log(links);
-
+function activeState() {}
+links.forEach((item) => {
+  item.addEventListener("click", () => {
+    links.forEach((linkbtn) => {
+      linkbtn.classList.remove("active");
+      item.classList.add("active");
+    });
+  });
+});
 navbtn.addEventListener("click", showList);
 function showList() {
   unorderedlist.classList.toggle("list");

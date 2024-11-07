@@ -57,6 +57,9 @@ header {
   padding: 2rem 4rem;
   background-color: rgb(250, 254, 254);
 }
+.active {
+  color: green;
+}
 header h3 {
   font-weight: 600;
   padding-top: 10px;
