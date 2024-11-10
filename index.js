@@ -4,7 +4,7 @@ const bright = document.querySelector(".fa-moon");
 const container = document.querySelector(".container");
 const heading = document.querySelector("header");
 const links = document.querySelectorAll("a");
-const dish = document.querySelectorAll(".dish");
+
 const copyright = document.querySelector(".copyright");
 bright.addEventListener("click", changeMode);
 function changeMode() {
@@ -16,6 +16,7 @@ function changeMode() {
     copyright.classList.add("edited");
     links.forEach((item) => {
       item.classList.add("link");
+      item.style.color = "white";
     });
   } else {
     container.style.color = " rgb(86, 81, 81)";
@@ -25,6 +26,7 @@ function changeMode() {
 
     links.forEach((item) => {
       item.classList.remove("link");
+      item.style.color = "rgb(86, 81, 81)";
     });
   }
 }
