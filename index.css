@@ -54,9 +54,17 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  padding: 2rem 8rem;
+  padding: 2rem 6rem;
   background-color: rgb(250, 254, 254);
   box-shadow: 0px 0px 10px 1px rgb(103, 137, 137);
+}
+.fa-bars {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.fa-moon {
+  font-size: 1.5rem;
 }
 .active {
   color: green;
@@ -66,12 +74,10 @@ header h3 {
   font-size: 1rem;
   padding-top: 10px;
 }
-
-nav .fa-bars {
-  display: none;
+.fa-sun {
   font-size: 1.5rem;
-  font-weight: 600;
 }
+
 nav {
   display: flex;
   justify-content: center;
@@ -85,9 +91,41 @@ nav {
   align-items: center;
   margin-top: 1rem;
 }
-.fa-moon {
-  font-size: 24px;
-  padding-top: 8px;
+.sidebar {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.475);
+  padding-top: 2rem;
+  box-shadow: 0px 0px 10px 0px gainsboro;
+  backdrop-filter: blur(10px);
+  animation: slide 0.5s ease-in-out 0.1s normal forwards;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.sidebar li {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  height: 100%;
 }
 
 li {
@@ -106,7 +144,7 @@ li a {
   font-weight: 500;
   color: rgb(86, 81, 81);
 }
-.link {
+.linkbtn {
   color: white;
 }
 main {
@@ -409,6 +447,7 @@ main {
   flex-direction: column;
   align-items: left;
   gap: 15px;
+  margin-bottom: 2rem;
 
   width: 200px;
 }
@@ -418,7 +457,7 @@ main {
   margin-bottom: 0;
 }
 .sub-section h2 {
-  margin: 10px 0;
+  margin: 5px 0;
   font-weight: 550;
   font-size: 1.3rem;
 }
@@ -469,6 +508,9 @@ footer .copyright {
     height: 300px;
     width: 300px;
   }
+  .sidebar {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 900px) {
   header {
@@ -478,47 +520,53 @@ footer .copyright {
     align-items: center;
     padding: 2rem;
   }
+
   nav {
     height: 100%;
   }
-  .unordered {
+  .link {
     display: none;
   }
-
-  .list {
-    background-color: rgb(252, 252, 252);
-    box-shadow: 0px 1px 15px 0px rgb(123, 123, 123);
-    z-index: 999;
+  .fa-bars {
+    font-size: 1.7rem;
+    margin-left: 1rem;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 70%;
-    position: absolute;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 40px 0;
-    box-sizing: border-box;
-    right: 0;
-    z-index: 999;
-    top: 50px;
+    margin-bottom: 5px;
   }
-  .fa-xmark {
-    font-size: 2rem;
-    z-index: 1000;
+  .fa-moon {
+    height: 100%;
+    margin-bottom: 5px;
+    font-size: 1.7rem;
+  }
+
+  .fa-sun {
+    font-size: 1.7rem;
+    height: 100%;
+    margin-bottom: 5px;
   }
 
   header h3 {
-    padding-top: 1px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fa-xmark {
+    font-size: 1.7rem;
+  }
+  li a {
+    font-size: 1.6rem;
   }
   li {
     list-style: none;
     margin: 0;
-  }
-  .list li a {
-    color: white;
-  }
-  nav .fa-bars {
-    display: block;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .home-image img {
     height: 280px;
